@@ -186,20 +186,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Tʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴀᴄᴛɪᴠᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴꜱ!! Cᴏɴɴᴇᴄᴛ ᴛᴏ ꜱᴏᴍᴇ ɢʀᴏᴜᴘꜱ ғɪʀꜱᴛ.", quote=True)
-                    return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+                    return await query.answer(' ˆ°• Share And Support •°ˆ ')
             else:
                 await query.message.edit_text(
                     "Iᴀᴍ Nᴏᴛ Cᴏɴɴᴇᴄᴛᴇᴅ Tᴏ Aɴʏ Gʀᴏᴜᴩ \nCʜᴇᴄᴋ /connections Oʀ Cᴏɴɴᴇᴄᴛ Tᴏ Aɴʏ Gʀᴏᴜᴩ",
                     quote=True
                 )
-                return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+                return await query.answer(' ˆ°• Share And Support •°ˆ ')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+            return await query.answer(' ˆ°• Share And Support •°ˆ ')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -253,7 +253,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+        return await query.answer(' ˆ°• Share And Support •°ˆ ')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -274,7 +274,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+        return await query.answer(' ˆ°• Share And Support •°ˆ ')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -297,7 +297,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Sᴏᴍᴇ Eʀʀᴏʀ Oᴄᴄᴜʀᴇᴅ!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+        return await query.answer(' ˆ°• Share And Support •°ˆ ')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -315,7 +315,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Sᴏᴍᴇ Eʀʀᴏʀ Oᴄᴄᴜʀᴇᴅ!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+        return await query.answer(' ˆ°• Share And Support •°ˆ ')
     elif query.data == "backcb":
         await query.answer()
 
@@ -326,7 +326,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer(' ˆ°• Tᴀᴍɪʟᴀɴ BᴏᴛsZ •°ˆ ')
+            return await query.answer(' ˆ°• Share And Support •°ˆ ')
         buttons = []
         for groupid in groupids:
             try:
@@ -388,7 +388,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                 g = short_url(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                await client.send_photo(chat_id=query.from_user.id, photo='https://graph.org/file/f7f173057c2b76940c79c.jpg', caption = f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}</b>", 
+                await client.send_photo(chat_id=query.from_user.id, photo='https://telegra.ph/file/c3f106100519b786882ff.jpg', caption = f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}</b>", 
                                           reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -440,8 +440,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f"https://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton('💥 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇs 💥', url='https://t.me/+5aoApavIMVo1YzQ1'),
-            InlineKeyboardButton('🔎 Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🔍', url='https://t.me/TamilanMoviesChat')
+            InlineKeyboardButton('💥 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇs 💥', url='https://t.me/+hWRPYFLYwkVkNjll'),
+            InlineKeyboardButton('🔎 Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🔍', url='https://t.me/+7yR6wI-1Z_RhYzQ1')
             ],[
             InlineKeyboardButton('😅 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 😊', callback_data='sources')
             ],[
@@ -457,7 +457,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
          )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Uᴩᴅᴀᴛᴇs 😜', url='https://t.me/Tamilan_BotsZ'),
+            InlineKeyboardButton('🤖 Uᴩᴅᴀᴛᴇs 😜', url='https://t.me/Tamil_Mob_Hd'),
             InlineKeyboardButton('♥️ Sʜᴀʀᴇ Mᴇ 💫', url=f"https://t.me/share/url?url=t.me/{temp.U_NAME}")
         ], [
             InlineKeyboardButton('🔭 Sᴛᴀᴛs 📊', callback_data='stats'),
